@@ -1,6 +1,6 @@
 let accessToken;
 const clientId = "f6b8226e9e5347ab9a60b4fc85a49c91";
-const redirectURI = "tawdry-bird.surge.sh";
+const redirectURI = "https://tawdry-bird.surge.sh";
 
 const Spotify = {
   getAccessToken() {
