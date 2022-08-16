@@ -1,6 +1,6 @@
 let accessToken;
 const clientId = "f6b8226e9e5347ab9a60b4fc85a49c91";
-const redirectURI = "https://tawdry-bird.surge.sh";
+const redirectURI = "http://tawdry-bird.surge.sh";
 
 const Spotify = {
   getAccessToken() {
@@ -17,7 +17,11 @@ const Spotify = {
       window.history.pushState("Access Token", null, "/");
       return accessToken;
     } else {
-      const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectURI}`;
+      const accessUrl =
+        "https://accounts.spotify.com/authorize?client_id=" +
+        clientId +
+        "&response_type=token&scope=playlist-modify-public&redirect_uri=" +
+        redirectURI;
       window.location = accessUrl;
     }
   },
